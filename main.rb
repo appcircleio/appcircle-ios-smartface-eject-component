@@ -140,7 +140,7 @@ end
 
 $compatible_xcode_version = find_compatible_xcode_version($smartface_xcode_version)
 unless $compatible_xcode_version
-	abort("Compatible xcode version does not found. Version : #$smartface_xcode_version")
+	puts "Compatible xcode version does not found. Version : #$smartface_xcode_version"
 end
 
 $ac_project_path = "#$smartface_output_folder/Smartface.xcodeproj"
