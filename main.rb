@@ -32,7 +32,7 @@ $smartface_xcode_version_path = "#$smartface_output_folder/xcodeversion"
 $smartface_project_json = JSON.parse(File.read("#$repository_path/config/project.json"))
 
 def run_command(command,skip_abort)
-	puts "@[command] #{command}"
+	puts "@@[command] #{command}"
 	status = nil
 	stdout_str = nil
 	stderr_str = nil
