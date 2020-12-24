@@ -143,7 +143,13 @@ unless $compatible_xcode_version
 	puts "Compatible xcode version does not found. Version : #$smartface_xcode_version"
 end
 
-$ac_project_path = "#$smartface_output_folder/Smartface.xcodeproj"
+$pod_file_path = "#$smartface_output_folder/Podfile"
+if File.file? "#$pod_file_path"
+	$ac_project_path = "#$smartface_output_folder/Smartface.xcworkspace"
+else
+	$ac_project_path = "#$smartface_output_folder/Smartface.xcodeproj"
+end
+
 $ac_scheme = "Smartface"
 $bundle_identifiers = $smartface_project_json["build"]["output"]["ios"]["bundleIdentifier"]
 
