@@ -109,9 +109,10 @@ def find_compatible_xcode_version(playerXcodeVersion)
 	xcode_versions = []
 	if File.directory? $xcode_list_path
 	    Dir.chdir($xcode_list_path) do
-	        Dir.glob('*').select { |f| 
+	        Dir.glob('xcode*').select { |f| 
 	            File.directory? f 
-	            xcode_versions << "#{f}"
+                f.slice!("xcode.")
+                xcode_versions << "#{f}"
 	        }
 	    end
 	end
