@@ -154,6 +154,7 @@ end
 $ac_scheme = "Smartface"
 $bundle_identifiers = $smartface_project_json["build"]["output"]["ios"]["bundleIdentifier"]
 
+$compatible_xcode_version="#{$compatible_xcode_version}.x"
 puts "AC_PROJECT_PATH = #$ac_project_path"
 puts "AC_SCHEME = #$ac_scheme"
 puts "AC_XCODE_VERSION = #$compatible_xcode_version"
