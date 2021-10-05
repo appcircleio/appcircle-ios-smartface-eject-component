@@ -73,12 +73,12 @@ run_command("smfc use #$smartface_player_version --os iOS",false)
 
 # Install dependencies
 Dir.chdir("#$repository_path/scripts") do
-	command = "npm i"
+	command = "yarn i"
 	run_command(command,false)
 end
 
 Dir.chdir("#$repository_path") do
-	command = "npm i && npm run build:transpile"
+	command = "yarn i && yarn run build:transpile"
 	run_command(command,false)
 end
 
